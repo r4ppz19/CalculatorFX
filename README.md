@@ -1,17 +1,15 @@
 # Calculator Application
 
-This is a simple calculator application built using JavaFX. The application supports basic arithmetic operations such as addition, subtraction, multiplication, and division.
+This is a simple calculator application built using JavaFX. The application supports basic arithmetic operations such as addition, subtraction, multiplication, division and modulus.
 
 ![Calculator Image](src/main/resources/image/Calculator.png)
 
 ## Features
 
-- Basic arithmetic operations: addition, subtraction, multiplication, and division.
+- Basic arithmetic operations: addition, subtraction, multiplication, division and modulus.
 - User-friendly interface with buttons for digits and operations.
-- Error handling for invalid inputs.
 - Clear and delete functionalities.
 - Toggle sign functionality.
-- Secret codes for special messages.
 
 ## Prerequisites
 
