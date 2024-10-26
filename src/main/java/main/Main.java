@@ -17,15 +17,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("src/main/resources/fxml/MainView.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/fxml/MainView.fxml")));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.setTitle("Calculator");
 
-        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("src/main/resources/css/ModernMinimalistStyle.css")).toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/css/ModernMinimalistStyle.css")).toExternalForm());
 
-        Image imageIcon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("src/main/resources/image/mainIcon.png")));
+        Image imageIcon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/image/mainIcon.png")));
         primaryStage.getIcons().add(imageIcon);
 
         primaryStage.show();

@@ -25,6 +25,8 @@ This is a simple calculator application built using JavaFX. The application supp
 ## Dependencies
 
 - JavaFX: Ensure you have JavaFX SDK installed and configured in your IDE or use the Zulu JDK which includes JavaFX.
-#
-#
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
 ### **CREATOR: R4PPZ**

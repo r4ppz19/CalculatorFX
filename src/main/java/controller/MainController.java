@@ -23,9 +23,11 @@ public class MainController {
     @FXML
     private void handleNumberAction(ActionEvent event) {
         String number = ((Button) event.getSource()).getText();
+
         if ("Error".equals(mainTextField.getText())) {
             mainTextField.clear();
         }
+
         mainTextField.appendText(number);
     }
 

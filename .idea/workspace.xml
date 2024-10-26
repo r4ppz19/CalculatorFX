@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e40b93bf-05f0-43b2-a138-0ec0ee7d1adf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/MainModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +54,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="CalculatorFX" />
-      <option name="PROGRAM_PARAMETERS" value="--module-path &quot;C:\Users\johnr\.m2\repository&quot; --add-modules javafx.controls,javafx.fxml " />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\johnr\.m2\repository\org\openjfx\javafx-base\17.0.12;C:\Users\johnr\.m2\repository\org\openjfx\javafx-controls\17.0.12;C:\Users\johnr\.m2\repository\org\openjfx\javafx-fxml\17.0.12;C:\Users\johnr\.m2\repository\org\openjfx\javafx-graphics\17.0.12;C:\Users\johnr\.m2\repository\org\openjfx\javafx-media\17.0.12;C:\Users\johnr\.m2\repository\org\openjfx\javafx-swing\17.0.12;C:\Users\johnr\.m2\repository\org\openjfx\javafx-web\17.0.12&quot; --add-modules javafx.controls,javafx.fxml " />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="main.*" />
@@ -94,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729942715429</updated>
-      <workItem from="1729942716365" duration="2664000" />
+      <workItem from="1729942716365" duration="3233000" />
     </task>
     <servers />
   </component>
