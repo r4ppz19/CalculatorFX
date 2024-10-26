@@ -31,7 +31,7 @@ This is a simple calculator application built using JavaFX. The application supp
 
 3. Run the application:
    ```sh
-   mvn clean install
+   mvn javafx:run
    
 ## Known Problem
 
