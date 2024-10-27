@@ -4,7 +4,7 @@
 }
 
 .text-field {
-    -fx-font-size: 12px;
+    -fx-font-size: 11px;
     -fx-alignment: center-right;
     -fx-padding: 15px;
     -fx-background-color: #2d2d2d;
@@ -13,16 +13,30 @@
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
 }
+#historyTextField {
+    -fx-border-color: transparent transparent #444444 transparent;
+    -fx-background-radius: 5px 5px 0 0;
+}
+
+#mainTextField {
+    -fx-border-color: #444444 transparent transparent transparent;
+    -fx-background-radius: 0 0 5px 5px;
+}
 
 .button {
-    -fx-font-size: 10px;
+    -fx-font-size: 11px;
     -fx-background-color: #3a3a3a;
     -fx-border-color: #444444;
     -fx-border-width: 1px;
     -fx-text-fill: #e0e0e0;
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
-    -fx-padding: 8px 10x;
+    -fx-padding: 12px 15px;
+    -fx-min-width: 55px;
+    /*
+
+    -fx-min-height: 20px;
+    */
 }
 
 .button:hover {
