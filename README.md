@@ -34,15 +34,3 @@ This is a simple calculator application built using JavaFX. The application supp
 ## Known Problem
 
 You can only do one calculation at a time. After one calculation, you need to click the `C` button to enter another calculation.
-   
-## Project Structure
-
-- `src/main/java`: Contains the Java source files.
-  - `controller`: Contains the controller classes.
-  - `main`: Contains the main application and model classes.
-- `src/main/resources`: Contains the FXML files, CSS styles, and images.
-- `src/test/java`: Contains the test classes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
