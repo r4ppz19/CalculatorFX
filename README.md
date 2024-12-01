@@ -10,7 +10,7 @@ This is a simple calculator application built using JavaFX. The application supp
 1. **Clone the repository**:
    ```sh
    git clone https://github.com/r4ppz19/CalculatorFX.git
-   cd calculator-application
+   cd CalculatorFX
 2. **Build the project using Maven**:
    ```sh
    mvn clean install
