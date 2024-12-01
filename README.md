@@ -21,7 +21,7 @@ This is a simple calculator application built using JavaFX. The application supp
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/r4ppz19/calculator-application.git
+   git clone https://github.com/r4ppz19/CalculatorFX.git
    cd calculator-application
 2. **Build the project using Maven**:
    ```sh
@@ -31,16 +31,13 @@ This is a simple calculator application built using JavaFX. The application supp
    ```sh
    mvn javafx:run
    
-## Known Problem
-
-You can only do one calculation at a time. After one calculation, you need to click the `C` button to enter another calculation.
-   
+ 
 ## Project Structure
 
-- `src/main/java`: Contains the Java source files.
+- `src/model/java`: Contains the Java source files.
   - `controller`: Contains the controller classes.
-  - `main`: Contains the main application and model classes.
-- `src/main/resources`: Contains the FXML files, CSS styles, and images.
+  - `model`: Contains the model application and model classes.
+- `src/model/resources`: Contains the FXML files, CSS styles, and images.
 - `src/test/java`: Contains the test classes.
 
 ## License

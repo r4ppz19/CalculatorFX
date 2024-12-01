@@ -2,6 +2,9 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import model.CalculatorModel;
 
 public class CalculatorController {
 
@@ -10,9 +13,7 @@ public class CalculatorController {
     @FXML
     private TextField historyTextField;
 
-    private final StringBuilder input = new StringBuilder();
-    private double result = 0;
-    private String operator = "";
+    private final CalculatorModel calculatorModel = new CalculatorModel();
 
     @FXML
     private void initialize() {
@@ -21,10 +22,10 @@ public class CalculatorController {
     }
 
     @FXML
-    private void handleButtonAction(javafx.event.ActionEvent event) {
-        String command = ((javafx.scene.control.Button) event.getSource()).getText();
+    private void handleButtonAction(ActionEvent event) {
+        String buttonText = ((Button) event.getSource()).getText();
 
-        switch (command) {
+        switch (buttonText) {
             case "C":
                 clear();
                 break;
@@ -41,102 +42,57 @@ public class CalculatorController {
                 handleDotInput();
                 break;
             default:
-                if (isNumeric(command)) {
-                    handleNumberInput(command);
+                if (calculatorModel.isNumeric(buttonText)) {
+                    handleNumberInput(buttonText);
                 } else {
-                    handleInput(command);
+                    handleOperatorInput(buttonText);
                 }
                 break;
         }
     }
 
     private void clear() {
-        input.setLength(0);
+        calculatorModel.clear();
         mainTextField.setText("");
-        result = 0;
-        operator = "";
+        historyTextField.setText("");
     }
 
     private void deleteLastCharacter() {
-        if (!input.isEmpty()) {
-            input.deleteCharAt(input.length() - 1);
-            mainTextField.setText(input.toString());
-        }
+        calculatorModel.deleteLastCharacter();
+        mainTextField.setText(calculatorModel.getCurrentInput());
     }
 
     private void toggleSign() {
-        if (!input.isEmpty()) {
-            double value = Double.parseDouble(input.toString());
-            value = -value;
-            input.setLength(0);
-            input.append(value);
-            mainTextField.setText(input.toString());
-        }
+        calculatorModel.toggleSign();
+        mainTextField.setText(calculatorModel.getCurrentInput());
     }
 
     private void handleDotInput() {
-        if (!input.toString().contains(".")) {
-            if (input.isEmpty()) {
-                input.append("0");
-            }
-            input.append(".");
-            mainTextField.setText(input.toString());
-        }
+        calculatorModel.appendDot();
+        mainTextField.setText(calculatorModel.getCurrentInput());
     }
 
     private void handleNumberInput(String number) {
-        input.append(number);
-        mainTextField.setText(input.toString());
+        calculatorModel.appendNumber(number);
+        mainTextField.setText(calculatorModel.getCurrentInput());
     }
 
-    private void handleInput(String command) {
-        if (command.equals("+") || command.equals("-") || command.equals("*") || command.equals("/") || command.equals("%")) {
-            if (!input.isEmpty()) {
-                calculate();
-            }
-            operator = command;
-            input.setLength(0);
+    private void handleOperatorInput(String command) {
+        if (!calculatorModel.getCurrentInput().isEmpty()) {
+            calculate();  // Perform any pending calculation
         }
+        calculatorModel.setOperator(command);
+        historyTextField.setText(String.valueOf(calculatorModel.getResult()) + " " + command);
     }
 
     private void calculate() {
-        if (input.isEmpty()) return;
-
-        double currentValue = Double.parseDouble(input.toString());
-
-        switch (operator) {
-            case "+":
-                result += currentValue;
-                break;
-            case "-":
-                result -= currentValue;
-                break;
-            case "*":
-                result *= currentValue;
-                break;
-            case "/":
-                if (currentValue != 0) {
-                    result /= currentValue;
-                } else {
-                    mainTextField.setText("Error");
-                    clear();
-                    return;
-                }
-                break;
-            case "%":
-                result %= currentValue;
-                break;
-            default:
-                result = currentValue;
-                break;
+        try {
+            calculatorModel.calculate();
+            mainTextField.setText(String.valueOf(calculatorModel.getResult()));
+            historyTextField.setText("");
+        } catch (ArithmeticException e) {
+            mainTextField.setText("Error");
+            clear();
         }
-
-        input.setLength(0);
-        mainTextField.setText(String.valueOf(result));
-        operator = ""; // Reset operator for next operation
-    }
-
-    private boolean isNumeric(String str) {
-        return str.matches("-?\\d+(\\.\\d+)?");
     }
 }
