@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import main.MainModel;
+import model.MainModel;
 
 public class MainController {
 
