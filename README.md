@@ -9,4 +9,4 @@ This is a simple calculator application built using JavaFX. The application supp
 <br>
 <br>
 
-### **CREATOR: R4PPZ**
+### NOT PERFECT (STILL SUCKS)
