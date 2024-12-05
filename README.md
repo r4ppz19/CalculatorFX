@@ -9,4 +9,4 @@ This is a simple calculator application built using JavaFX. The application supp
 <br>
 <br>
 
-### NOT PERFECT (STILL SUCKS)
+### CURRENT SITUATION: FUCKED
